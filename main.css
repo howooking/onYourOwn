@@ -1,3 +1,9 @@
+:root {
+  --tex-color: brown;
+  --background-color: beige;
+  --accent-color: burlywood;
+}
+
 /* COMMON */
 body {
   margin: 0;
@@ -18,7 +24,7 @@ li {
 /* NAVBAR */
 .navbar {
   display: flex;
-  background-color: beige;
+  background-color:var(--background-color);
   align-items: center;
   justify-content: space-between;
   padding: 12px;
@@ -43,12 +49,12 @@ li {
   padding: 8px 12px;
 }
 .navbar__menu li a {
-  color: brown;
+  color: var(--tex-color);
   text-align: center;
   padding: 8px;
 }
 .navbar__menu li a:hover {
-  background-color: burlywood;
+  background-color: var(--accent-color);
   border-radius: 5px;
 }
 .navbar__share {
@@ -56,11 +62,11 @@ li {
   padding-left: 0;
 }
 .navbar__share .material-icons {
-  color: brown;
+  color: var(--tex-color);
   padding: 8px 8px;
 }
 .navbar__share .material-icons:hover {
-  background-color: burlywood;
+  background-color: var(--accent-color);
   border-radius: 50%;
 }
 .hamburger {
@@ -84,18 +90,17 @@ li {
     width: 100%;
   }
   .navbar__menu li a:hover {
-    background-color: burlywood;
+    background-color: var(--accent-color);
     border-radius: 5px;
   }
-  .navbar__menu.active {
+  .navbar__menu.active,
+  .navbar__share.active {
     display: flex;
   }
   .navbar__share {
     display: none;
   }
-  .navbar__share.active {
-    display: flex;
-  }
+
   .hamburger {
     display: block;
   }
