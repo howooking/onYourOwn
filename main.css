@@ -37,6 +37,7 @@ li {
 }
 .navbar__menu {
   display: flex;
+  padding-left: 0;
 }
 .navbar__menu li {
   padding: 8px 12px;
@@ -52,6 +53,7 @@ li {
 }
 .navbar__share {
   display: flex;
+  padding-left: 0;
 }
 .navbar__share .material-icons {
   color: brown;
@@ -73,9 +75,17 @@ li {
   .navbar {
     flex-direction: column;
   }
+  .navbar__logo {
+    align-self: flex-start;
+  }
   .navbar__menu {
     flex-direction: column;
     display: none;
+    width: 100%;
+  }
+  .navbar__menu li a:hover {
+    background-color: burlywood;
+    border-radius: 5px;
   }
   .navbar__menu.active {
     display: flex;
